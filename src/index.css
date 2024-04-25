@@ -1,18 +1,32 @@
+html{
+  padding: 0px;
+  margin: 0px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 .grid{
   display:grid;
-  grid-template:1fr 1fr 1fr 1fr/1fr 1fr 1fr 1fr;
+  grid-template:1fr 1fr 1fr/1fr 1fr 1fr;
   gap:20px;
 }
-body{
-  font-family:'Pixelify Sans', sans-serif;
-  background-image :url('./assets/pokemon-in-the-wild.png');
-  background-size:cover;
-  display:flex;
 
-}p{
+#bgimg{
+  position: fixed;
+  height: 100vh;
+  width: 200vh;
+  z-index: -100;
+}
+
+body{
+  font-family: "Poppins", sans-serif;
+  display:flex;
+  margin: 0px;
+}
+
+p{
   font-size:20px;
 }
+
 .login{
   background-color:white;
   position:absolute;
@@ -25,6 +39,7 @@ body{
   border-right:3px solid black;
   border-bottom:3px solid black;
 }
+
 .login form{
   flex-direction:column;
   display:flex;
@@ -34,10 +49,12 @@ body{
   width:auto;
   
 }
+
 .login input[type="submit"]{
   width:30%;
   margin:auto;
 }
+
 .login form input{
   font-size:25px;
   margin-left:5%;
@@ -49,15 +66,21 @@ body{
   border:1px solid black;
   border:1px solid black;
 }
+
 .card{
   background-color:rgba(57, 57, 57, 0.5);
   pointer-events:auto;
+  padding:10px;
+  font-size:15px;
+  
 }
+
 button{
   font-size:25px;
   margin-bottom:20px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .game-over{
   position:fixed;
   top:50%;
@@ -72,28 +95,25 @@ button{
   border:2px solid black;
   padding:35px;
   z-index:25;
-
 }
 
 .start-btn{
   text-align: center;
-display: inline-block;
-margin:5px;
+  display: inline-block;
+  margin:5px;
   font-weight: bold;
   padding: 10px 0 10px 10px ;
   background-color: lightgray;
   text-shadow: -1px -1px black, 1px 1px white;
   color: gray;
   -webkit-border-radius: 7px;
--moz-border-radius: 7px;
--o-border-radius: 7px;
-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  border-radius: 7px;
   box-shadow: 0 .2em gray; 
   cursor: pointer;
 
 }
-
-
 
 /* CSS */
 .button-56 {

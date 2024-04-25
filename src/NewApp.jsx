@@ -112,17 +112,20 @@ export default function NewApp() {
     }
   }
   return (
-    <div>
+    <>
+    
+    <div style={{width:'100%',display:'flex',flexDirection:'row',gap:'150px'}}>
+        <div style={{alignItems:'center', jusifyContent:'center',  height:'100%', marginTop:'15%'}}>
+        <h1 style={{float:'left',width:'100%',textAlign:'left', fontSize:'15px'}}> User Email: {userEmail} </h1>
         <h1>Pokemon Memory Card Game</h1>
-        <h1> User Email: {userEmail} </h1>
+        
         <p>Score</p>
         
         <p>{count}</p>
         <span>
           <button onClick={btnClick} className="button-56">Start Game</button>
-
-          
-      </span>
+        </span>
+        </div>
       {gameOver && (
         <div className="game-over">
             <h1>Game Over</h1>
@@ -144,5 +147,6 @@ export default function NewApp() {
         ))}
       </div>
     </div>
+    </>
   );
 }
