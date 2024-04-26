@@ -31,7 +31,7 @@ function Signup() {
   return (
     <div className="login">
       <h1>Signup</h1>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} style={{marginBottom:'50px'}}>
         <input
           type="email"
           value={email}
@@ -46,8 +46,6 @@ function Signup() {
         />
         <input type="submit" value="Signup" />
       </form>
-      <br />
-      <p>OR</p>
       <br />
       <Link to="/">Login Page</Link>
     </div>

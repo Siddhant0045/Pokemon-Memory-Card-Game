@@ -114,9 +114,10 @@ export default function NewApp() {
   return (
     <>
     
-    <div style={{width:'100%',display:'flex',flexDirection:'row',gap:'150px'}}>
-        <div style={{alignItems:'center', jusifyContent:'center',  height:'100%', marginTop:'15%'}}>
-        <h1 style={{float:'left',width:'100%',textAlign:'left', fontSize:'15px'}}> User Email: {userEmail} </h1>
+    <div style={{width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',justifyContent:'center',gap:'64px'}}>
+        <div style={{color:'lightgray',alignItems:'center', jusifyContent:'center',  height:'100%'}}>
+
+        <h2 style={{float:'left',width:'100%',textAlign:'left', fontSize:'15px',marginBottom:'185px'}}> User Email: {userEmail} </h2>
         <h1>Pokemon Memory Card Game</h1>
         
         <p>Score</p>

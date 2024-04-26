@@ -30,9 +30,12 @@ function Login() {
   }
 
   return (
+    <>
+    <img src="charizard.gif" style={{transform:'scaleX(-1)',height:'250px', width:'250px',position:'absolute',top:'5px',left:'10% '}}/>
+    <img src="squirtle.gif" style={{height:'250px', width:'250px',position:'absolute',top:'450px',left:'75%',}}/>
     <div className="login">
       <h1>Login</h1>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} style={{marginBottom:'50px'}}>
         <input
           type="email"
           value={email}
@@ -48,10 +51,8 @@ function Login() {
         <input type="submit" value="Login" />
       </form>
       <br />
-      <p>OR</p>
-      <br />
       <Link to="/signup">Signup Page</Link>
-    </div>
+    </div></>
   );
 }
 
