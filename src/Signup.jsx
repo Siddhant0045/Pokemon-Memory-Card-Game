@@ -29,6 +29,9 @@ function Signup() {
   }
 
   return (
+    <>
+    <img src="charizard.gif" style={{transform:'scaleX(-1)',height:'250px', width:'250px',position:'absolute',top:'5px',left:'10% '}}/>
+    <h1 style={{color:"white",fontSize:"35px"}}>Pokemon Memory Card Game</h1>
     <div className="login">
       <h1>Signup</h1>
       <form onSubmit={submit} style={{marginBottom:'50px'}}>
@@ -49,6 +52,7 @@ function Signup() {
       <br />
       <Link to="/">Login Page</Link>
     </div>
+    </>
   );
 }
 

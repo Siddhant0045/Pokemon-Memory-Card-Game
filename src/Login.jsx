@@ -1,4 +1,4 @@
-// Login.jsx
+
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
@@ -32,7 +32,7 @@ function Login() {
   return (
     <>
     <img src="charizard.gif" style={{transform:'scaleX(-1)',height:'250px', width:'250px',position:'absolute',top:'5px',left:'10% '}}/>
-    <img src="squirtle.gif" style={{height:'250px', width:'250px',position:'absolute',top:'450px',left:'75%',}}/>
+    <h1 style={{color:"white",fontSize:"35px"}}>Pokemon Memory Card Game</h1>
     <div className="login">
       <h1>Login</h1>
       <form onSubmit={submit} style={{marginBottom:'50px'}}>

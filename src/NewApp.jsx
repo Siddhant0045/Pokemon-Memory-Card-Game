@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './Card.jsx';
-import Button from './Button.jsx';
+
 import { useLocation } from 'react-router-dom';
 export default function NewApp() {
   const [pokemon, setPokemon] = useState([]);
@@ -13,7 +13,7 @@ export default function NewApp() {
   const [count, setCount] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [win, setWin] = useState(false);
-  const [scoreReq, setScoreReq] = useState(6);
+  
 
   const location = useLocation(); 
 
@@ -49,9 +49,9 @@ export default function NewApp() {
     const shuffledPokemon = [...shortPokemon]; 
     for (let i = shuffledPokemon.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [shuffledPokemon[i], shuffledPokemon[j]] = [shuffledPokemon[j], shuffledPokemon[i]]; // Swap elements to shuffle
+      [shuffledPokemon[i], shuffledPokemon[j]] = [shuffledPokemon[j], shuffledPokemon[i]];
     }
-    setRandomizedPokemon([...shuffledPokemon]); // Ensure React detects the change
+    setRandomizedPokemon([...shuffledPokemon]);
   };
 
 
@@ -85,7 +85,7 @@ export default function NewApp() {
             card.style.pointerEvents = 'auto';
         });
     }
-  },[gameOver,count,scoreReq]);
+  },[gameOver,count]);
   const btnClick = (difficulty) =>
   {
     setWin(false);
@@ -93,39 +93,25 @@ export default function NewApp() {
     setCount(0);
     setClickedonPokemon([]);
     randomizePokemon();
-    if (difficulty == "Easy"){
-      setScoreReq(6);
-  }else if (difficulty == "Medium"){
-      setScoreReq(12);
-  }else if (difficulty == "Hard"){
-      setScoreReq(18);
-  }
+    
     
   }
-  const setScore = (difficulty) =>{
-    if (difficulty == "Easy"){
-        setScoreReq(6);
-    }else if (difficulty == "Medium"){
-        setScoreReq(12);
-    }else if (difficulty == "Hard"){
-        setScoreReq(18);
-    }
-  }
+  
   return (
     <>
     
     <div style={{width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',justifyContent:'center',gap:'64px'}}>
         <div style={{color:'lightgray',alignItems:'center', jusifyContent:'center',  height:'100%'}}>
-
-        <h2 style={{float:'left',width:'100%',textAlign:'left', fontSize:'15px',marginBottom:'185px'}}> User Email: {userEmail} </h2>
+        <h2 style={{float:'left',width:'100%',textAlign:'left', fontSize:'15px',marginBottom:'150px'}}> User Email: {userEmail} </h2>
         <h1>Pokemon Memory Card Game</h1>
-        
         <p>Score</p>
-        
         <p>{count}</p>
         <span>
           <button onClick={btnClick} className="button-56">Start Game</button>
         </span>
+        <p>Rules:</p>
+        <p>You have to click on new pokemon everytime to score a point</p>
+        <p>Score 9 to win</p>
         </div>
       {gameOver && (
         <div className="game-over">
